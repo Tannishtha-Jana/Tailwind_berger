@@ -79,28 +79,28 @@ function Cust() {
             <table className="w-full border-1 border-[#393636ac] text-md mt-5 text-left">
               <thead className="bg-[#dbdbdb7c]">
                 <tr>
-                  <th className="px-4 py-2 border">NAME</th>
+                  <th className="px-4 py-2 border">Region</th>
                   <th className="px-4 py-2 border">DEPO</th>
-                  <th className="px-4 py-2 border">UNKNOWN</th>
-                  <th className="px-4 py-2 border">LIMITS</th>
+                  <th className="px-4 py-2 border">Customer Code</th>
+                  <th className="px-4 py-2 border">Bill To </th>
+                  <th className="px-4 py-2 border">Customer Name</th>
+                  <th className="px-4 py-2 border">Credit LIMITS</th>
                 </tr>
               </thead>
               <tbody>
                 {result ? (
                   result.map((item, index) => (
                     <tr key={index} className="hover:bg-[#dbdbdb4f]">
-                      <td className="px-4 py-2 border">{item.name}</td>
+                      <td className="px-4 py-2 border">{item.region}</td>
                       <td className="px-4 py-2 border">{item.depo}</td>
-                      <td className="px-4 py-2 border">{item.unknown}</td>
+                      <td className="px-4 py-2 border">{item.custcode}</td>
+                      <td className="px-4 py-2 border">{item.billto}</td>
+                      <td className="px-4 py-2 border">{item.custname}</td>
                       <td className="px-4 py-2 border">{item.limits}</td>
                     </tr>
                   ))
                 ) : (
                   <tr className="px-8 py-2 block text-gray-500"> No Result Found
-                    {/* <td className="px-4 py-2 border text-gray-500">ABC</td>
-                    <td className="px-4 py-2 border text-gray-500">DEP1</td>
-                    <td className="px-4 py-2 border text-gray-500">---</td>
-                    <td className="px-4 py-2 border text-gray-500">1000</td> */}
                   </tr>
                 )}
               </tbody>
